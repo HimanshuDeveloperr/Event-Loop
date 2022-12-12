@@ -1,1 +1,22 @@
+to access all the features that are provided by the browser to us we had to make a connection with them 
+and that is where comes our web APIs which help us to make connection to the features of the browser so 
+we could use them.
 
+some of the web APIs are listed below and these all are not the part of java script
+
+1. set timeout
+2. dom apis(ex:- document.querySelector,getelementbyid etc)
+3. console
+4. location
+5. localstorage.
+6. fetch().(these help us to make connection with external servers)
+
+so basically our browser gives these web apis to the js engine inside it which we can use in our call stack to access and execute them.
+an we can do all of this because of the global object/window
+
+so to access the apis we had to use the keyword window
+
+for ex:=
+
+window.settimeout but as it is present inside the global space 
+we can write settimeout to access timer without the window keyword.
