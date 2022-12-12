@@ -1,0 +1,4 @@
+why do we need call back queue?
+
+we need a call queue cause in case if an user clicks several call back functions or the createor uses settimeouts 
+in some crazy numbers and cause we only had one call stack in our js we need the queue to maintain the sequence in which we can insert the call back function sequentially and execute them one by one and as queue follows the property of first in first out we can do this by maintaing a call queue during execution of our callback functions
