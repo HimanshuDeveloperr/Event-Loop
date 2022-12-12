@@ -1,22 +1,22 @@
-console.log("the console.log here will go to the window and push /log the value we writting in that console api")
 
-setTimeout(function cb() {
+console.log("start")
 
-    console.log("callback function.")
+
+document.getElementById("clickMe").addEventListener("click",function cb() {
+    console.log('callback function')
     
-}, 5000);
+})
 
-console.log("end")
-
-
+console.log("finish")
 
 
+// code execution line by line
 
+// in line no 2 js engine connects with the window object from there it connects to our console in browser and log the value we put here.
 
+// in line no 5 our js engine again goes to the window object from there to web api  called dom apis which is document object model of our html code and gives back the object which we asked for with the id attach to it in our case it is a button
 
-//after our call stack recognizes that it is a settimeout api which allows us to access the browser api it will move out from the call stack and takes a place in the browser with the timer set to it and timer will get started then after the timer goes off our callback function will be first inserted in a call queue from there the event loop will be checking if there is any function is in the call queue and if there is a function present the event loop will be popping it out and pushes it into the call stack where the execution context of that call back function will be creayed and it will be executed in the call stack .
+// in line no 5 then again a web api named addeventlistener creates a space/register space for our call back function in the wep api environment with the even click attached to it 
+// when the user do the event in our case clicks the button the call back function goes to the call queue and then our event loop monitors whether the call stack is empty or not if it is empty our event loop pushes the call back function from the call queue into the call stack for its execution after the execution it vanishes from the call stack as well as from our call queue.
 
-// console->browser->console->log the value
-
-//settimeout->browser->creates a space for the callback function->starts the function timer->timer goes off->browser sends it to the call queue->event loop recognizes the function->  sends ito to call stack->executed .
-
+// for line 10 similar to line no 2
