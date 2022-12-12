@@ -1,5 +1,17 @@
-what is microtask queue?
+what comes inside  microtask queue?
 
-so basically it is similar to our call back queue and works in a same way but has higher execution priority
-as the functions which are inserted in this queue will get get executed first and then the function of call queue 
-will be execute.
+all the call back functions / functions which comes through 'promises' and mutation observer will go into the microtask queue.
+
+mutation observer will continuously check whether there is a mutation in the dom tree or no and if there is one it will execute a call back function.
+
+callback queue== task queue.
+
+what is starvation ?
+
+if suppose we got a call back function in our microtask queue which creates an multiple callbacks which also pushe in our micro task queue and we already had a pending call back function to be executed inside our callback queue 
+but as the js /event loop will give priority to microtask callback functions , the callbacks in our callback queue 
+will be postponed till all the call backs in the micritask will be completely executed and this delay of execution of callbacks in callback queue is known as starvation.
+
+simple explanation from google:-
+
+ a problem encountered in concurrent computing where a process is perpetually denied necessary resources to process its work.
